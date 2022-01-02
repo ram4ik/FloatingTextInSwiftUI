@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct FloatingTextInSwiftUIApp: App {
+    
+    @State var emailAddress: String = ""
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(leftIcon: "person", placeHolder: "Email Address", text: $emailAddress)
+                .padding()
         }
     }
 }
